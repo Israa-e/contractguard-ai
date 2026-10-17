@@ -1,0 +1,79 @@
+# ==========================================
+# TypeScript & Build Outputs
+# ==========================================
+# Ignore the directory where TypeScript compiles your files (usually dist or build)
+dist/
+build/
+out/
+/out-tsc
+
+# Ignore TypeScript build history and incremental compilation caches
+*.tsbuildinfo
+
+# (Optional) Ignore JavaScript compiled files if you write TS but output JS inline
+# Only uncomment if you do not compile to a dedicated /dist folder
+# *.js
+# *.js.map
+
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+jspm_packages/
+web_modules/
+.pnpm-store/
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# ==========================================
+# Logs and Diagnostics
+# ==========================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+coverage/
+.nyc_output/
+
+# ==========================================
+# Tooling & Framework Caches
+# ==========================================
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+
+# ==========================================
+# IDEs & Text Editors
+# ==========================================
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+
+# VS Code (Keeps workspace settings shared, but ignores user-specific history)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# 3rd party tools
+.DS_Store
+Thumbs.db
