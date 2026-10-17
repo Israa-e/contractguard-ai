@@ -77,3 +77,9 @@ coverage/
 # 3rd party tools
 .DS_Store
 Thumbs.db
+
+
+#user uploads 
+uploads/
+*.pdf
+*.docx
