@@ -1,0 +1,13 @@
+{
+  "name": "contractguard-ai",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces":["apps/api", "apps/web", "packages/shared"],
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
