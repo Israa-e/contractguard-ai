@@ -9,9 +9,13 @@ app.use(cors({ origin: process.env.WEB_ORIGIN ?? "http://localhost:5173" }));
 app.use(express.json({ limit: "100kb" }));
 
 app.get("/api/v1/health/db", async (req, res) => {
-    const result = await pool.query("SELECT NOW()")
-    res.json({ database: "ok", time: result.rows[0].now });
-
+    try {
+        const result = await pool.query("SELECT NOW()")
+        res.json({ database: "ok", time: result.rows[0].now });
+    } catch (e) {
+        console.log(e)
+        res.status(503).json({ database: "down" })
+    }
 })
 app.get("/api/v1/health", (req, res) => {
     res.json({ status: "ok" })
