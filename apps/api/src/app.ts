@@ -13,7 +13,7 @@ app.get("/api/v1/health/db", async (req, res) => {
         const result = await pool.query("SELECT NOW()")
         res.json({ database: "ok", time: result.rows[0].now });
     } catch (e) {
-        console.log(e)
+        console.error(e)
         res.status(503).json({ database: "down" })
     }
 })
