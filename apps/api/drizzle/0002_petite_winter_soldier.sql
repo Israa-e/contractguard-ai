@@ -1,0 +1,1 @@
+CREATE INDEX "contracts_user_id_idx" ON "contracts" USING btree ("id");

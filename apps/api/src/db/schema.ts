@@ -1,4 +1,4 @@
-import { integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { index, integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
 export const users = pgTable("users", {
     id: serial("id").primaryKey(),
@@ -19,4 +19,6 @@ export const contracts = pgTable("contracts", {
     status: text("status").notNull().default("uploaded"),
     language: text("language"),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
-});
+}, (table) => [
+    index("contracts_user_id_idx").on(table.userId),
+]);
