@@ -29,6 +29,20 @@
       "when": 1792757632826,
       "tag": "0003_neat_prodigy",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792767556050,
+      "tag": "0004_brown_wild_child",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1792767685658,
+      "tag": "0005_nervous_living_tribunal",
+      "breakpoints": true
     }
   ]
 }

@@ -22,3 +22,14 @@ export const contracts = pgTable("contracts", {
 }, (table) => [
     index("contracts_user_id_idx").on(table.userId),
 ]);
+
+export const contractClauses = pgTable("contract_clauses", {
+    id: serial("id").primaryKey(),
+    contractId: integer("contract_id").notNull().references(() => contracts.id, { onDelete: "cascade" }),
+    position: integer("position").notNull(),
+    heading: text("heading"),
+    text:text("text").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),}
+, (table) => [
+    index("contract_clauses_contract_id_idx").on(table.contractId),
+]);
